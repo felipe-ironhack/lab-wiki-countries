@@ -7,7 +7,7 @@
   <Router> 
     <App />
   <Router /> 
-    - (or BrowserRouter if you didn't change the name 
+    - (or BrowserRouter if you didn't change the name)
 
 - Have just one <Routes> <Routes /> component in the whole App 
     => Probably just on App.js

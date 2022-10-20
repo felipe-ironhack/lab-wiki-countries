@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="container d-flex justify-content-between mt-5 pt-4">
-        <div className="row col align-items-start mt-3">
+        <div className="col align-items-start mt-3">
           <CountriesList countries={countriesList} />
         </div>
-        <div className="row col-5">
+        <div className="col-5">
           <Routes>
             <Route
               path="/:id"
