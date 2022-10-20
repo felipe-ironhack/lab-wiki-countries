@@ -10,6 +10,7 @@ After spending too much time on GitHub, you found a [JSON dataset of countries](
   <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-wiki-countries-1.gif" alt="Example - Finished LAB" />
 </p>
 
+<br>
 
 
 ## Setup
@@ -26,6 +27,8 @@ After spending too much time on GitHub, you found a [JSON dataset of countries](
   $ npm start
   ```
 
+<br>
+
 
 ## Submission
 
@@ -38,6 +41,8 @@ After spending too much time on GitHub, you found a [JSON dataset of countries](
   ```
 
 - Create a Pull Request so that your TAs can check your work.
+
+<br>
 
 
 ## Getting Started
@@ -56,7 +61,9 @@ export default App;
 
 <br>
 
-## Instructions
+
+## Instructions 
+
 
 ### Iteration 0 | React Router installation
 
@@ -72,23 +79,27 @@ And setup the router in your `src/index.js` file:
 // src/index.js
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
-ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+    <Router>
+      <App />
+    </Router>
 );
 
-// comment skipped to stay organized
+// comment omitted for readability
 reportWebVitals();
 ```
+
+<br>
+
 
 ### Bootstrap installation
 
@@ -105,6 +116,9 @@ To make the Bootstrap styles available in the entire app, import the stylesheet 
 import 'bootstrap/dist/css/bootstrap.css';
 ```
 
+<br>
+
+
 ## Instructions
 
 ### Iteration 1.1 | Create components
@@ -119,17 +133,34 @@ In this iteration, we will focus on the general layout. Before you start, inside
 
   This is the id of the country (example: `/ESP` for Spain, `/FRA` for France).
 
+<br>
+
 To help you with the structure of the components, we gave you an example of a page inside `example.html`.
 
-If you want to style it, refresh your memory on Bootstrap in the [docs](https://getbootstrap.com/docs/4.0) or check out how we approached styling in the `example.html`.
+If you want to style it, refresh your memory on Bootstrap in the [docs](https://getbootstrap.com) or check out how we approached styling in the `example.html`.
+
+<br>
+
+**NOTE:** If you decide to copy the code provided in the `example.html`, keep the following in mind:
+- In React, the `class` html attribute is defined using `className`
+- For inline CSS, use a JavaScript object and name each CSS property in camelCase (more details [here](https://reactjs.org/docs/dom-elements.html#style)).
+
+<br>
+
 
 ### Iteration 1.2 | Navbar component
 
 Create a navbar component that displays the title *LAB - WikiCountries*.
 
+<br>
+
+
 ### Iteration 1.3 | CountriesList component
 
 This component should render a list of `Link`s, each having the country's `alpha3Code` embedded in the URL. Click on a `Link` should render the country details component.
+
+<br>
+
 
 ### Iteration 1.4 | CountryDetails component and `Route` setup
 
@@ -144,16 +175,22 @@ Now that our list of countries is ready, we should create the `CountryDetails` c
 
 The `alpha3Code` of the country will be available throught the URL parameters. To access the URL parameters, from the browser's URL bar, use the React Routers hooks `useParams`. For a reminder on setting up and accessing the URL parameters with React Router, check [this example](https://reactrouter.com/docs/en/v6/api#useparams).
 
+<br>
 
+**NOTE:** If you haven't added CSS, the country details may be displayed at the very bottom of the page.
 
-**NOTE:** For the small picture of the flag, you can use the lowercased `alpha2Code` and embed it in the URL as shown below:
+<br>
 
+For the small picture of the flag, you can use the lowercased `alpha2Code` and embed it in the URL as shown below:
 
 
 - France: https://flagpedia.net/data/flags/icon/72x54/fr.png
 - Germany: https://flagpedia.net/data/flags/icon/72x54/de.png
 - Brazil: https://flagpedia.net/data/flags/icon/72x54/br.png
 - etc.
+
+<br>
+
 
 ----
 
@@ -203,5 +240,7 @@ Using the `useEffect` hook set an effect in the `CountriesDetails` component. Th
 - India: https://ih-countries-api.herokuapp.com/countries/IND
 
 The effect should run after the initial render, and each time the URL parameter with the `alpha3Code` changes.
+
+
 
 Happy coding! :heart:
