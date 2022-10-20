@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar-link {
+  color: white;
+  font-weight: 900;
+  font-size: 1.25rem;
+  text-decoration: none;
+  cursor: pointer;
+}

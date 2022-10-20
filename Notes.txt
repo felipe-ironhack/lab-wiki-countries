@@ -1,0 +1,18 @@
+
+- react-scripts (4.0.3) throws a bug 
+    => Before `npm install react-router-dom` change it to "react-scripts": "5.0.0" or "5.0.1" 
+    This will update the react-scripts and everything will be wonderful 
+
+- Don't forget to wrap the <App /> with the <Router /> 
+    - (or BrowserRouter if you didn't change the name 
+
+- Don't forget to add the "to" attribute to your links
+
+- Route component receives a "path" attribute
+
+- Be careful with the properties in the static ".json" / axios.get
+
+- You need to destructure what you receive using useParams()
+
+- On the useEffect() dependencies array you could add the id/code in the Details
+    => so you the details updated after you click in another country
