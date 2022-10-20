@@ -1,18 +1,31 @@
 
-- react-scripts (4.0.3) throws a bug 
-    => Before `npm install react-router-dom` change it to "react-scripts": "5.0.0" or "5.0.1" 
-    This will update the react-scripts and everything will be wonderful 
+- The instructions for this LAB is a little confusing
+    - We'll be creating the components (maybe they will not work or you need to use placeholder values at first)
+    - We'll be linking everything together on Iteration 2 and maybe you should change some of the placeholders and add props
 
-- Don't forget to wrap the <App /> with the <Router /> 
+- Don't forget to wrap the app component on the `index.js`
+  <Router> 
+    <App />
+  <Router /> 
     - (or BrowserRouter if you didn't change the name 
 
-- Don't forget to add the "to" attribute to your links
+- Have just one <Routes> <Routes /> component in the whole App 
+    => Probably just on App.js
+
+- Don't forget to add the "to=" attribute to your links
 
 - Route component receives a "path" attribute
 
+- When you're putting everything together don't forget to add the bootstrap classes
+    - I recommend using `<div className="container d-flex justify-content-between">` instead of just `<div className="container">`
+        => That way you'll get the CountryDetails on the side of the CountryList component
+
 - Be careful with the properties in the static ".json" / axios.get
 
-- You need to destructure what you receive using useParams()
+- The useParams() hook gives you an object with the property name that you used on the dynamic route
+    - console.log() to check what you're getting
 
-- On the useEffect() dependencies array you could add the id/code in the Details
-    => so you the details updated after you click in another country
+- On the useEffect() dependencies array you could add the id/code in the CountryDetails
+    => That way you'll have the details updated after you click in another country
+
+- Integrating everything getting live info from the API
