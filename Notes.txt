@@ -1,5 +1,5 @@
 
-- The instructions for this LAB is a little confusing
+- The instructions for this LAB are long
     - We'll be creating the components (maybe they will not work or you need to use placeholder values at first)
     - We'll be linking everything together on Iteration 2 and maybe you should change some of the placeholders and add props
 
@@ -12,9 +12,9 @@
 - Have just one <Routes> <Routes /> component in the whole App 
     => Probably just on App.js
 
-- Don't forget to add the "to=" attribute to your links
+- Link or NavLink receive a "to=" attribute 
 
-- Route component receives a "path" attribute
+- Route component receives a "path=" attribute
 
 - When you're putting everything together don't forget to add the bootstrap classes
     - I recommend using `<div className="container d-flex justify-content-between">` instead of just `<div className="container">`
